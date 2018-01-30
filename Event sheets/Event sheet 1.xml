@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <include>Enemy</include>
         <include>Player_Scripts</include>
         <event-block sid="526417443510209">
             <conditions>
@@ -60,16 +61,35 @@
                             <param id="0" name="Instance variable">Life</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action behavior="Physics" id="0" name="Apply force" sid="719937140009829" type="Energy_Ball">
-                            <param id="0" name="Force X">25</param>
-                            <param id="1" name="Force Y">0</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                         <action id="-3" name="Create object" sid="160752824141470" type="System">
                             <param id="0" name="Object to create">Mana_Part</param>
                             <param id="1" name="Layer">&quot;Entites&quot;</param>
                             <param id="2" name="X">Energy_Ball.X</param>
                             <param id="3" name="Y">Energy_Ball.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="897719452991101">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="358459626334404" type="Energy_Ball" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="0" name="Apply force" sid="719937140009829" type="Energy_Ball">
+                            <param id="0" name="Force X">25</param>
+                            <param id="1" name="Force Y">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="530303430947782">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="378419360409112" type="Energy_Ball" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="0" name="Apply force" sid="356420818092104" type="Energy_Ball">
+                            <param id="0" name="Force X">-25</param>
+                            <param id="1" name="Force Y">0</param>
+                            <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>

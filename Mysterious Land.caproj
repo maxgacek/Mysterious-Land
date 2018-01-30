@@ -673,6 +673,38 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Enemy" sid="623360144696436">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Direction" sid="699617156491016" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="887509568623708">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="140136908589114" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_RightBorder" sid="608184524914344">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387971317346382" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy_LeftBorder" sid="339803884231850">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="315564975142886" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -682,6 +714,7 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Player_Scripts.xml</event-sheet>
+        <event-sheet>Enemy.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="NWjs" uid="6" />
