@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <include>Player_Scripts</include>
+        <event-block sid="526417443510209">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="747057601995117" type="System" />
+            </conditions>
+            <actions>
+                <action id="14" name="Set width" sid="955885954186456" type="NWjs">
+                    <param id="0" name="Width">1280</param>
+                </action>
+                <action id="15" name="Set height" sid="587155449890244" type="NWjs">
+                    <param id="0" name="Height">720</param>
+                </action>
+                <action id="13" name="Set Y" sid="380187552590180" type="NWjs">
+                    <param id="0" name="Y">0</param>
+                </action>
+                <action id="12" name="Set X" sid="672804717659212" type="NWjs">
+                    <param id="0" name="X">0</param>
+                </action>
+                <action id="0" name="Play" sid="915981680840188" type="Audio">
+                    <param id="0" name="Audio file">SwingingLevel</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="10" name="Request fullscreen" sid="974760423024904" type="Browser">
+                    <param id="0" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="730214509325713">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="864631548048685" type="System" />
+            </conditions>
+            <actions>
+                <action id="-24" name="Move to top" sid="755477020482343" type="Clouds_F" />
+                <action id="0" name="Set text" sid="939938413807899" type="Coin_Text">
+                    <param id="0" name="Text">Coin</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="106252504555772">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="422972561073624" type="Energy_Ball">
+                    <param id="0" name="Object">Ground_Tiles</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="434280529669507">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="197483148828860" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="277044537521147" type="Energy_Ball">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Physics" id="0" name="Apply force" sid="719937140009829" type="Energy_Ball">
+                            <param id="0" name="Force X">25</param>
+                            <param id="1" name="Force Y">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="160752824141470" type="System">
+                            <param id="0" name="Object to create">Mana_Part</param>
+                            <param id="1" name="Layer">&quot;Entites&quot;</param>
+                            <param id="2" name="X">Energy_Ball.X</param>
+                            <param id="3" name="Y">Energy_Ball.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="983450257309560">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="635332925646894" type="Energy_Ball">
+                    <param id="0" name="Instance variable">Life</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="282133870015216" type="Energy_Ball" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
