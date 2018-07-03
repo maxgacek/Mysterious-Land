@@ -712,7 +712,7 @@
         <layout>UI.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Main.xml</event-sheet>
         <event-sheet>Player_Scripts.xml</event-sheet>
         <event-sheet>Enemy.xml</event-sheet>
     </event-folder>
